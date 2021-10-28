@@ -1,4 +1,4 @@
 FROM openjdk:11
-EXPOSE 8085
-ADD target/JenkinsPipeline.jar JenkinsPipeline.jar 
-ENTRYPOINT ["java","-jar","JenkinsPipeline.jar"]
+VOLUME /tmp
+ADD target/JenkinsPipeLine-0.0.1-SNAPSHOT.war JenkinsPipeline.war
+ENTRYPOINT ["java","-jar","/JenkinsPipeline.war"]
